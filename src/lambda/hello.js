@@ -9,7 +9,7 @@ export function handler(event, context, callback) {
       }),
     })
   }
-
+ 
   // Now you are ready to access this API from anywhere in your Gatsby app! For example, in any event handler or lifecycle method, insert:
   // fetch("/.netlify/functions/hello")
   //    .then(response => response.json())
