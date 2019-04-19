@@ -10,9 +10,9 @@ export const IndexPageTemplate = ({ image }) => (
 
     <div className="row">
       <div className="nav three border">
-        <Link to="about">about</Link>
-        <Link to="about">about</Link>
-        <Link to="about">about</Link>
+        <Link to="about" className="nav-link row">Selected Work</Link>
+        <Link to="about" className="nav-link row">About</Link>
+        <Link to="about" className="nav-link row">Contact</Link>
       </div>
       <div className="svg-wrap nine border">
         <SvgLines animate={true} duration={4000} stagger={100} fade={true} hide={true}>
