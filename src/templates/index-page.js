@@ -55,6 +55,7 @@ export const IndexPageTemplate = ({ image }) => (
         <div className="text-vert-middle">
           <h3 className="black-text">Terrapin Care Station</h3>
         </div>
+        <Link to="tcs" className="link-wrap"></Link>
       </div>
 
       <div className="link-row">
