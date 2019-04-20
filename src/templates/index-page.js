@@ -65,6 +65,7 @@ export const IndexPageTemplate = ({ image }) => (
         <div className="text-vert-middle">
           <h3 className="black-text">AetherWorks</h3>
         </div>
+        <Link to="aetherworks" className="link-wrap"></Link>
       </div>
 
       <div className="link-row">
@@ -74,6 +75,7 @@ export const IndexPageTemplate = ({ image }) => (
         <div className="text-vert-middle">
           <h3 className="black-text">Lucera Financial Infrastructures</h3>
         </div>
+        <Link to="lucera" className="link-wrap"></Link>
       </div>
 
       <div className="link-row">
@@ -83,6 +85,7 @@ export const IndexPageTemplate = ({ image }) => (
         <div className="text-vert-middle">
           <h3 className="black-text">Alpine Labs</h3>
         </div>
+        <Link to="alpine" className="link-wrap"></Link>
       </div>
 
 
