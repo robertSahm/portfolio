@@ -1,6 +1,6 @@
 // Typography
 
-h1, h2, h3, h4, h5, h6, p, a
+h1, h2, h3, h4, h5, h6, p, a, li
   -moz-osx-font-smoothing: grayscale
   -webkit-font-smoothing: antialiased
 
@@ -27,11 +27,18 @@ h3
   margin: 0
   padding: 0
 
-p.body-copy
+.body-copy
   font-family: 'EB Garamond'
   font-size: 1.3rem
   color: $black-text
   font-weight: 400
+
+ul.bullet-list
+  list-style-type: disk
+  list-style-position: outside
+
+  li.body-copy
+
 
 a
   font-family: 'EB Garamond'
@@ -44,4 +51,5 @@ a
   &:hover
     color: $pink
     text-decoration: underline
+
 

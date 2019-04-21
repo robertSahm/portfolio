@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import { HTMLContent } from '../components/Content'
 import header from "../img/alpine_ss_2.png"
@@ -31,11 +31,12 @@ export const AlpinePageTemplate = () => {
         <div className="row">
           <img src={work} className="alpine-full" alt="alpine" />
         </div>
-        <div className="row disk-row">
-          <img src={login} className="stack" alt="disks" />
-          <img src={snowmobile} className="big-disk" alt="disks" />
+        <div className="row bottom-row">
+          <img src={login} className="login" alt="login" />
+          <img src={snowmobile} className="snowmobile" alt="snowmobile" />
         </div>
       </div>
+      <Link to="lucera" className="link-left">previous</Link>
     </section>
   )
 }
