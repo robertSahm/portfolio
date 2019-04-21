@@ -13,7 +13,7 @@
     max-width: 1400px
 
     .row
-      margin: 0 3% 0 6% 
+      margin: 0 3% 0 3% 
   h1
     color: $pink
     font-size: 6em
@@ -28,21 +28,43 @@
   max-width: 980px
   padding: 4rem 4rem 2rem
 
-.frame
-  .row
-    .body-copy
-      width: auto
-      margin-right: 10%
-      text-align: left
-    
-    .tcs-round
-      display: block
-      margin: 15% auto
-      width: 70%
+.copy-column
+  margin-bottom: 4rem
 
-    .chart-1
-      align-self: flex-start
-      flex: 0 0 auto
-      width: 60%
-      padding-top: 1rem
-      max-width: 760px
+  .body-copy
+    width: 50%
+    padding: .7rem 0
+    margin: 0 auto
+    text-align: left
+
+.left-column
+  width: 45%
+
+  .tcs-round
+    display: block
+    margin: 20% auto
+    width: 70%
+
+  .tcs-app
+    display: block
+    margin: 0 auto
+    width: 80%
+
+.chart-column
+  width: 55%
+
+  .tcs-chart
+    display: block
+    width: 100%
+
+.tcs-gmap
+  align-self: flex-start
+  flex: 0 0 auto
+  max-width: 100%
+  margin-bottom: 2%
+
+.tcs-logo-full
+  align-self: flex-start
+  flex: 0 0 auto
+  max-width: 20%
+  margin: 2% auto 4%
