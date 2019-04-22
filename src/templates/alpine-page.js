@@ -11,7 +11,7 @@ import snowmobile from "../img/alpine_ss_7.png"
 
 export const AlpinePageTemplate = () => {
   return (
-    <section className="container aether-container">
+    <section className="container alpine-container">
       <div className="frame">
         <h1 className="">Alpine Labs</h1>
         <div className="row">
