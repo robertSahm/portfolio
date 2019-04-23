@@ -44,11 +44,8 @@ export const TCSPageTemplate = () => {
         <div className="row">
           <img src={gmap} className="tcs-gmap" alt="tcs-chart" />
         </div>
-
-      
-      
       </div>
-          <img src={tcsLogo} className="tcs-logo-full" alt="tcs-chart" />
+      <img src={tcsLogo} className="tcs-logo-full" alt="tcs-chart" />
     </section>
   )
 }
