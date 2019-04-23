@@ -1,21 +1,20 @@
 .home-container
   display: flex nowrap
   width: 100%
-  padding: 2% 
+  padding: 1.5rem 
   background-color: white
+  position: relative
 
   .frame
     height: 100vh
     max-height: 730px
     position: relative
-    box-shadow: 0 10px 10px 0 #ccc
+    box-shadow: 0 7px 12px 0 rgba(0, 0, 0, .25)
     margin: 0
     overflow: hidden
-    // align-self: center
-    // padding: 0
-    // margin: 0
-    // box-shadow: 0 10px 10px 2px #aaa
-    // max-width: 1400px
+
+  h2.subhead
+    line-height: 0rem
 
 svg
   position: absolute
@@ -34,61 +33,54 @@ svg
 .works-wrap
   padding: 1rem
   display: flex
-
-h2.works-header
-  font-size: 2rem
-  font-weight: 800
-  font-style: italic
-  padding: 2rem 1rem
-  color: $orange
+  flex-flow: row wrap
+  justify-content: center
   width: 100%
+  margin: auto
 
-.link-row
-  display: flex
-  position: relative
-  width: auto
-  height: 45px
-  align-items: flex-start
-  border-left: 10px solid $pink
-  margin: 1.3rem 0
-  transition: all .15s ease-out
-  &:hover
-    cursor: pointer
-    border-left: 50px solid $pink
+  .row
+    justify-content: center
 
-  .logo-wrap
-    background-color: $tan
-    display: flex
-    width: auto
-    height: 100%
-    padding-left: 1.3rem
+  .link-box
+    position: relative
+    width: 300px
+    height: 250px
+    margin: 2rem
+    padding: .5rem
+    box-shadow: 0 7px 12px 0 rgba(0, 0, 0, .25)
 
-    img
-      align-self: center
-      flex: 0 0 auto
-      min-width: 100px
-      max-width: 100px
-      max-height: 90px
-      &.alpine
-        max-height: 120px
+    .logo-wrap
+      display: flex
+      justify-content: center
+      width: 100%
+      height: 80%
+
+      img
+        width: 100%
+        max-width: 200px
+        align-self: center
+        flex: 0 0 auto
+
+    &.tcs-box
+      background-color: $black-text
+      color: $tan
+    
+    &.aether-box
+      background-color: $aether-orange
+
+    &.lucera-box
+      img
         max-width: 120px
 
-.text-vert-middle
-  background-color: $tan
-  height: 100%
-  width: auto
-  border-radius: 0 50px 50px 0
+    &.alpine-box
+      background-color: $yellow
 
-  h3
-    font-size: 1.8rem
-    margin-left: 1rem
-    padding-top: .15rem
-    padding-right: 2rem
-    
+    h3
+      font-size: 1.5rem
+      text-align: center
 
 .link-wrap
   position: absolute
-  display: block
   top: 0
   left: 0
   width: 100%

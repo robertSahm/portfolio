@@ -1,34 +1,64 @@
 .nav-wrap
   display: flex
-  position: fixed
+  // position: fixed
   width: auto
   top: 0
   right: 0
-  margin: 2% 2% 0 0
-  z-index: 100
-  justify-content: flex-end
-  padding: .3rem 2rem .3rem .3rem
-  background-color: rgba($orange, 0.2)
-  // &:before
-  //   content: ""
-  //   position: absolute
-  //   width: 100%
-  //   height: 100%
-  //   top: 0
-  //   right: 0
+  margin: 0 2%
+  z-index: 10
+  justify-content: center
+  padding: .4rem
 
-  
-.navbar-item, button.navbar-item
+.navbar-item, a.navbar-item
+  position: relative
   text-decoration: none
-  color: $black-text
+  color: $blue
+  font-style: italic
   font-size: 1.2rem
+  line-height: 1.5rem
   padding: 0
   margin: 0 .7rem
-  font-weight: 600
-
-  &:hover
-    cursor: pointer
+  font-weight: 700
+  z-index: 20
+  cursor: pointer
   
+  
+$nav-active-color: $pink
 
 .active
-  color: red
+  color: $nav-active-color
+
+.dropdown
+  position: absolute
+  top: 3.2rem 
+  // left: 0
+  width: auto
+  height: auto
+  padding: .8rem 0
+  background-color: $yellow
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .25)
+  &:after 
+    content: ''
+    display: block
+    position: absolute
+    left: 40%
+    bottom: 100%
+    width: 0
+    height: 0
+    border-bottom: 20px solid $yellow
+    border-top: 20px solid transparent
+    border-left: 20px solid transparent
+    border-right: 20px solid transparent
+
+
+  .droplink
+    position: static
+    display: block
+    top: 0
+    left: 0
+    width: 100%
+    padding: .15rem 1rem
+    margin: 0
+    color: $blue
+    &.active
+      color: $nav-active-color

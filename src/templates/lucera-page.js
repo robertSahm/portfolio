@@ -23,7 +23,7 @@ export const LuceraPageTemplate = () => {
           </div>
 
           <div className="bulb-wrap column">
-            <SvgLines animate={true} duration={4000} stagger={100} fade={true} hide={false}>
+            <SvgLines animate={true} duration={4000} stagger={100} fade={true}>
               <svg viewBox="0 0 348 488">
                 <g id="Lucera-Detail" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                   <g id="-" transform="translate(-739.000000, -137.000000)">

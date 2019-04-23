@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import { HTMLContent } from '../components/Content'
+import Navbar from '../components/Navbar'
 import card from "../img/tcs-card.jpg"
 import round from "../img/tcs-round.png"
 import app from "../img/tcs-order-app.png"
@@ -15,6 +16,7 @@ import tcsLogo from "../img/tcs-logo-full.png"
 export const TCSPageTemplate = () => {
   return (
     <section className="container tcs-container">
+      <Navbar />
       <div className="frame">
 
         <h1>Terrapin Care Station</h1>
