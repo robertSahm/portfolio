@@ -4,6 +4,8 @@ import Home from '../components/Home'
 import SvgLines from "react-mt-svg-lines"
 import Layout from '../components/Layout'
 import Navbar from '../components/Navbar'
+import About from '../components/About'
+import Contact from '../components/Contact'
 import Terrapin from '../components/TCS'
 import Aether from '../components/Aether'
 import Lucera from '../components/Lucera'
@@ -15,19 +17,26 @@ import alpine from "../img/alpine-small.png"
 
 const IndexPage = ({ props }) => {
   const [activeTab, setActiveTab] = useState('work')
-  const [activeWork, setActiveWork] = useState('')
+  const [activeWork, setActiveWork] = useState('tcs')
   const [homeHeight, setHeight] = useState('100vh')
   const [homeLeft, setLeft] = useState('28.5%')
+  const [animateTrigger, setTrigger] = useState(1)
 
   const tabClick = (e, name) => {
     setActiveTab(name)
-    setLeft('50%')
+    setLeft('60%')
     setHeight('20vh')
+    setTrigger(animateTrigger + 1)
     // e.target.classList.toggle('active')
-    activeTab == 'about' || 'contact' ? setActiveWork('') : null
+    // activeTab == 'work' ? setActiveWork('tcs') : setActiveWork('')
+    activeTab == 'about' || 'contact' ? setActiveWork('') : setActiveWork('tcs')
   }
 
-  console.log(activeWork)
+  const growHome = () => {
+    setHeight('100vh')
+    setLeft('28.5%')
+    setTrigger(animateTrigger + 1)
+  }
 
   const workClick = (e, name) => {
     setActiveWork(name)
@@ -42,7 +51,7 @@ const IndexPage = ({ props }) => {
               <img src={terrapinLogo} alt="logo" />
             </div>
             <h3>Terrapin Care Station</h3>
-            <a className="link-wrap" onClick={(e) => workClick(e, 'tcs')}
+            <a className={"link-wrap"} onClick={(e) => workClick(e, 'tcs')}
             ></a>
           </div>
           <div className="link-box aether-box">
@@ -77,22 +86,24 @@ const IndexPage = ({ props }) => {
         <Layout />
         <section className="home-container">
           <div className="frame bg-tan" style={{ height: homeHeight }}>
-            <h1 className="pink twelve">
+            <h1 className="pink twelve" onClick={() => growHome()}>
               <span>R</span>
               <span>O</span>BBY <span>S</span>AHM
             </h1>
             <h2 className="orange twelve subhead">Web Developer and Designer</h2>
             <div className="row">
-              <div className="svg-wrap">
+              <div className="svg-wrap" onClick={() => growHome()}>
                 <SvgLines 
-                  animate={true} 
-                  duration={4000} 
+                  animate={animateTrigger} 
+                  duration={2000} 
                   stagger={1000} 
                   fade={true} 
                   timing={'ease-in-out'}
-                  playback={'1 alternate-reverse both'}
+                  // playback={'1 alternate-reverse both'}
                 >
-                  <svg viewBox="0 0 850 850" style={{ left: homeLeft }}>
+                  <svg viewBox="0 0 850 850" 
+                    style={{ left: homeLeft }}
+                  >
                     <path className="svg-shape" d="M126.295079,849 C126.295079,836.832135 126.295077,822.542941 126.295079,726.676279 C126.295077,702.000539 110.831649,673.761239 70.0693065,645.879145 C29.3069638,617.997052 35.0800894,602.923045 29.3069613,555.780551 C29.3069601,514.151616 5.68434189e-14,132.73142 5.68434189e-14,132.73142 C5.68434189e-14,132.73142 1.06901023,120.940163 7.32227341,131.182745 C13.5755378,141.425327 84.0844314,525.783667 92.3327317,547.310075 C100.581031,568.836484 96.6248327,575.27831 153.812416,617.997054 C211,660.7158 211,766.376798 211,766.376798 L211,849 L126.295079,849 Z" id="Path-9-Copy" fill="#EC5C1E"/>
                     <path className="svg-shape" d="M616.799842,434.715689 C500.301191,527.652982 388.992389,634.740289 388.992389,849 L255.017899,849 C254.664206,833.809959 259.552328,796.040162 269.682265,735.690608 C298.160176,638.598485 568.444458,424.113776 698.731576,325.874187 C829.018694,227.634598 734.060867,327.884538 727.001422,335.698146 C701.599531,361.076706 664.865671,394.082554 616.799842,434.715689 Z" id="Path-8-Copy" fill="#4374C5" />
                     <path className="svg-shape" d="M347.55102,849 L230,849 C240.893934,732.342197 228.33602,623.46257 466.235389,453.123408 C560.155323,385.875468 578.969484,272.322547 578.969484,272.322547 C578.969485,263.635612 585.308691,245.806205 590,263.635611 C585.308691,345.214063 561.699843,432.225215 460.694169,539.772695 C393.357053,611.471016 355.64267,714.546784 347.55102,849 Z" id="Path-7-Copy" fill="#EC5C1E" />
@@ -110,13 +121,23 @@ const IndexPage = ({ props }) => {
         </section>
 
         <nav className="nav-wrap">
-          <a className="navbar-item" onClick={(e) => tabClick(e, 'work')}>
+          <a 
+            className={ activeTab == 'work' ? 'active navbar-item' : 'navbar-item' } 
+            onClick={(e) => tabClick(e, 'work')}
+          >
             Selected Work
           </a>
-          <a className="navbar-item" onClick={(e) => tabClick(e, 'about')}>
+          <a 
+            className="navbar-item" 
+            className={ activeTab == 'about' ? 'active navbar-item' : 'navbar-item' }
+            onClick={(e) => tabClick(e, 'about')}
+          >
             About
           </a>
-          <a className="navbar-item" onClick={(e) => tabClick(e, 'contact')}>
+          <a 
+            className={ activeTab == 'contact' ? 'active navbar-item' : 'navbar-item' }
+            onClick={(e) => tabClick(e, 'contact')}
+          >
             Contact
           </a>
         </nav>
@@ -125,6 +146,8 @@ const IndexPage = ({ props }) => {
         {activeWork == 'aether' ? <Aether /> : null}
         {activeWork == 'lucera' ? <Lucera /> : null}
         {activeWork == 'alpine' ? <Alpine /> : null}
+        {activeTab == 'about' ? <About /> : null}
+        {activeTab == 'contact' ? <Contact /> : null}
       </div>
     </div>
   )
