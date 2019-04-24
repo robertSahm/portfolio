@@ -4,7 +4,7 @@ import Home from '../components/Home'
 import SvgLines from "react-mt-svg-lines"
 import Layout from '../components/Layout'
 import Navbar from '../components/Navbar'
-import Terrapin from '../components/tcs'
+import Terrapin from '../components/TCS'
 import Aether from '../components/Aether'
 import Lucera from '../components/Lucera'
 import Alpine from '../components/Alpine'
@@ -21,11 +21,13 @@ const IndexPage = ({ props }) => {
 
   const tabClick = (e, name) => {
     setActiveTab(name)
-    setHeight('20vh')
     setLeft('50%')
+    setHeight('20vh')
     // e.target.classList.toggle('active')
     activeTab == 'about' || 'contact' ? setActiveWork('') : null
   }
+
+  console.log(activeWork)
 
   const workClick = (e, name) => {
     setActiveWork(name)
@@ -82,7 +84,14 @@ const IndexPage = ({ props }) => {
             <h2 className="orange twelve subhead">Web Developer and Designer</h2>
             <div className="row">
               <div className="svg-wrap">
-                <SvgLines animate={true} duration={1000} stagger={100} fade={true}>
+                <SvgLines 
+                  animate={true} 
+                  duration={4000} 
+                  stagger={1000} 
+                  fade={true} 
+                  timing={'ease-in-out'}
+                  playback={'1 alternate-reverse both'}
+                >
                   <svg viewBox="0 0 850 850" style={{ left: homeLeft }}>
                     <path className="svg-shape" d="M126.295079,849 C126.295079,836.832135 126.295077,822.542941 126.295079,726.676279 C126.295077,702.000539 110.831649,673.761239 70.0693065,645.879145 C29.3069638,617.997052 35.0800894,602.923045 29.3069613,555.780551 C29.3069601,514.151616 5.68434189e-14,132.73142 5.68434189e-14,132.73142 C5.68434189e-14,132.73142 1.06901023,120.940163 7.32227341,131.182745 C13.5755378,141.425327 84.0844314,525.783667 92.3327317,547.310075 C100.581031,568.836484 96.6248327,575.27831 153.812416,617.997054 C211,660.7158 211,766.376798 211,766.376798 L211,849 L126.295079,849 Z" id="Path-9-Copy" fill="#EC5C1E"/>
                     <path className="svg-shape" d="M616.799842,434.715689 C500.301191,527.652982 388.992389,634.740289 388.992389,849 L255.017899,849 C254.664206,833.809959 259.552328,796.040162 269.682265,735.690608 C298.160176,638.598485 568.444458,424.113776 698.731576,325.874187 C829.018694,227.634598 734.060867,327.884538 727.001422,335.698146 C701.599531,361.076706 664.865671,394.082554 616.799842,434.715689 Z" id="Path-8-Copy" fill="#4374C5" />
