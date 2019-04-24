@@ -1,6 +1,7 @@
+$nav-active-color: $pink
+
 .nav-wrap
   display: flex
-  // position: fixed
   width: auto
   top: 0
   right: 0
@@ -21,12 +22,10 @@
   font-weight: 700
   z-index: 20
   cursor: pointer
-  
-  
-$nav-active-color: $pink
 
-.active
-  color: $nav-active-color
+  &.active
+    color: $nav-active-color
+  
 
 .dropdown
   position: absolute
@@ -49,7 +48,6 @@ $nav-active-color: $pink
     border-top: 20px solid transparent
     border-left: 20px solid transparent
     border-right: 20px solid transparent
-
 
   .droplink
     position: static

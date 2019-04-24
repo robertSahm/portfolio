@@ -1,14 +1,5 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Home from '../components/Home'
-import Navbar from '../components/Navbar'
-import WorkSelector from '../components/WorkSelector'
-import TCS from '../components/TCS'
-import Aether from '../components/Aether'
-import Lucera from '../components/Lucera'
-import Alpine from '../components/Alpine'
-// import Footer from '../components/Footer'
-// import SvgLines from "react-mt-svg-lines"
 import '../components/styles/all.sass'
 import useSiteMetadata from './SiteMetadata'
 
@@ -30,15 +21,8 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
-      <Home />
-      <Navbar />
-      <WorkSelector />
-      {/* <TCS /> */}
-      {/* <Aether /> */}
-      {/* <Lucera /> */}
-      <Alpine />
-      <div>{children}</div>
-      {/* <Footer /> */}
+      {/* <Home /> */}
+      {/* <div>{children}</div> */}
     </div>
   )
 }
