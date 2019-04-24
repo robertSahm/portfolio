@@ -1,0 +1,42 @@
+.about-container
+  display: flex
+  width: 100%
+  padding: 3% 2%
+
+  .frame
+    align-self: center
+    background-color: $tan
+    padding: 0
+    box-shadow: 0 10px 10px 2px #aaa
+    width: 100%
+    max-width: 1400px
+    // max-height: 520px
+    justify-content: space-between
+
+    .row
+      width: 100%
+      .column
+        width: 50%
+        &.copy-column
+          padding: 2rem
+          height: 100%
+          h1
+            color: $orange
+            font-size: 3rem
+            margin: 0
+            padding: 0
+          .body-copy
+            width: 100%
+            font-weight: 400
+            font-size: 1.2rem
+      
+        .img-wrap
+          display: flex
+          justify-content: center
+          align-items: center
+          height: 100%
+
+          img
+            width: 100%
+
+        
