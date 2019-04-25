@@ -1,12 +1,18 @@
+
+$breakpoints: (phone: 320px, tablet: 768px, desktop: 1024px)
+
 .home-container
   display: flex nowrap
   width: 100%
   padding: 1.5rem 
   background-color: white
   position: relative
+  @include media(">phone", "<=tablet")
+    padding: 1rem
 
   .frame
-    // height: 100vh
+    height: 80vh
+    width: 100%
     max-height: 690px
     position: relative
     box-shadow: 0 7px 12px 0 rgba(0, 0, 0, .25)
@@ -14,6 +20,15 @@
     overflow: hidden
     transition: height 1s ease-out
 
+    @include media(">phone", "<=tablet")
+      max-height: 50vh
+
+  h1.my-name
+    color: $pink
+
+    @include media(">phone", "<=tablet")
+      font-size: 2rem
+ 
   h2.subhead
     line-height: 0rem
 
@@ -32,62 +47,67 @@ svg
   // &:hover
   //   fill-opacity: .1
 
-.works-wrap
-  padding: 1rem
-  display: flex
-  flex-flow: row wrap
-  justify-content: center
-  width: 100%
-  margin: auto
+// .works-wrap
+//   padding: 1rem
+//   display: flex
+//   flex-flow: row wrap
+//   justify-content: center
+//   width: 100%
+//   margin: auto
 
-  .row
-    justify-content: center
+//   .row
+//     justify-content: center
 
-  .link-box
-    position: relative
-    width: 200px
-    height: 180px
-    margin: 1rem
-    padding: .5rem
-    box-shadow: 0 7px 12px 0 rgba(0, 0, 0, .25)
+//   .link-box
+//     position: relative
+//     width: 200px
+//     height: 180px
+//     margin: 1rem
+//     padding: .5rem
+//     box-shadow: 0 7px 12px 0 rgba(0, 0, 0, .25)
 
-    .logo-wrap
-      display: flex
-      justify-content: center
-      width: 100%
-      height: 80%
+//     .logo-wrap
+//       display: flex
+//       justify-content: center
+//       width: 100%
+//       height: 80%
 
-      img
-        width: 100%
-        max-width: 140px
-        align-self: center
-        flex: 0 0 auto
+//       img
+//         width: 100%
+//         max-width: 140px
+//         align-self: center
+//         flex: 0 0 auto
 
-    &.tcs-box
-      background-color: $black-text
-      color: $tan
+//     &.tcs-box
+//       background-color: $black-text
+//       color: $tan
     
-    &.aether-box
-      background-color: $aether-orange
+//     &.aether-box
+//       background-color: $aether-orange
 
-    &.lucera-box
-      img
-        max-width: 80px
+//     &.lucera-box
+//       img
+//         max-width: 80px
 
-    &.alpine-box
-      background-color: $yellow
+//     &.alpine-box
+//       background-color: $yellow
 
-    h3
-      font-size: 1.2rem
-      text-align: center
+//     h3
+//       font-size: 1.2rem
+//       text-align: center
 
-a.link-wrap
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
-  height: 100%
-  cursor: pointer
+// a.link-wrap
+//   position: absolute
+//   top: 0
+//   left: 0
+//   width: 100%
+//   height: 100%
+//   cursor: pointer
 
-.content-block
-  height: 500px
+// .content-block
+//   height: 500px
+
+// .spacer
+//   // overflow: hidden
+//   height: 1000px
+//   border: 1px solid red

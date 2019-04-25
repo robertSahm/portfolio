@@ -20,23 +20,21 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
             <p className="body-copy">
               Navigating the decisions, personalities and solutions inherent to creative group work  comes naturally after decades spent creating original music in team environments.
             </p>
-            <p className="body-copy">
-              <b>Other fun facts:</b> 
-              <ul>
-                <li>
-                  I spent 6 months in rural Thailand volunteering with Burmese refugees setting them up with Ubuntu computer labs, facilitating medical research for battlefield medics.
-                </li>
-                <li>
-                  I played 4 years of varsity volleyball
-                </li>
-                <li>
-                  My 3 siblings are also musicians, though we never got around to doing the Partridge Family thing.
-                </li>
-                <li>
-                  Between tours with the band I worked as a server at the finest (in my humble opinion) seafood restaurant in Washington D.C.: <a href="http://www.blacksaltrestaurant.com/" targe="_blank"  rel="noopener noreferrer">Blacksalt</a>.
-                </li>
-              </ul>
-            </p>
+            <b>Other fun facts:</b> 
+            <ul>
+              <li>
+                I spent 6 months in rural Thailand volunteering with Burmese refugees setting them up with Ubuntu computer labs, facilitating medical research for battlefield medics.
+              </li>
+              <li>
+                I played 4 years of varsity volleyball
+              </li>
+              <li>
+                My 3 siblings are also musicians, though we never got around to doing the Partridge Family thing.
+              </li>
+              <li>
+                Between tours with the band I worked as a server at the finest (in my humble opinion) seafood restaurant in Washington D.C.: <a href="http://www.blacksaltrestaurant.com/" targe="_blank"  rel="noopener noreferrer">Blacksalt</a>.
+              </li>
+            </ul>
           </div>
           <div className="column">
             <div className="img-wrap">

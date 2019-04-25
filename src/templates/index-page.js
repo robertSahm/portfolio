@@ -2,38 +2,11 @@ import React from 'react'
 import Layout from '../components/Layout'
 import WorkSelector from '../components/WorkSelector'
 
-
 const IndexPage = () => {
 	return (
-    <div>
-      <div className="index-wrapper">
-        <Layout />
-        <WorkSelector />
-      </div>
-{/* 
-      <form
-        name="contact-me"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        action='?no-cache=1'
-      >
-
-        <input type="hidden" name="bot-field" />
-        <input type="hidden" name="form-name" value="contact-me" />
-
-        <label htmlFor="name">Name</label>
-        <input type="text" name="name" id="name" />
-
-
-        <label htmlFor="email">Email</label>
-        <input type="text" name="email" id="email" />
-
-        <label htmlFor="message">Message</label>
-        <textarea name="message" id="message" rows="6" />
-
-        <input type="submit" value="Send Message" className="special" />
-      </form> */}
+    <div className="index-wrapper">
+      <Layout />
+      <WorkSelector />
     </div>
   )
 }
