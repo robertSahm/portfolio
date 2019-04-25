@@ -12,9 +12,7 @@ const Aether = class extends React.Component {
       <section className="container aether-container">
         <div className="frame">
           <h1 className="">AetherWorks</h1>
-          <div className="row">
-            <img src={disksDepth} className="disks-depth" alt="disks" />
-          </div>
+          <img src={disksDepth} className="disks-depth" alt="disks" />
           <div className="column copy-column">
             <p className="body-copy">
               <b>AetherWorks</b> is a software research & venture development firm based in New York City. I was originally brought me on for a full redesign of their Windows application <b>AetherStore</b>, though soon into that project I was offered the opportunity to redesign their remaining properties, including the new company site and multiple product marketing sites.
@@ -26,15 +24,9 @@ const Aether = class extends React.Component {
               AetherStore allows users to create network drives from unused hard drive space, often completely negating the need for external LAN storage systems.
             </p>
           </div>
-          <div className="row">
-            <img src={bigList} className="" alt="disks" />
-          </div>
-          <div className="row">
-            <img src={breadcrumb} className="breadcrumb" alt="disks" />
-          </div>
-          <div className="row">
-            <img src={sizeSelect} className="size-select" alt="disks" />
-          </div>
+          <img src={bigList} className="img-full" alt="disks" />
+          <img src={breadcrumb} className="img-full" alt="disks" />
+          <img src={sizeSelect} className="img-full" alt="disks" />
           <div className="row disk-row">
             <img src={stack} className="stack" alt="disks" />
             <img src={bigDisk} className="big-disk" alt="disks" />

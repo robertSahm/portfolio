@@ -1,8 +1,10 @@
 .alpine-container
+  display: flex
   width: 100%
   text-align: center
-  display: flex
-  padding: 3% 2% 
+  margin-top: 2rem
+  @include media(">phone", "<=tablet")
+    margin-top: 0
 
   .frame
     align-self: center
@@ -12,23 +14,32 @@
     box-shadow: 0 10px 10px 2px #aaa
     max-width: 1400px
 
-    .row
-      margin: 0 3% 0 3% 
-      justify-content: center
+    h1
+      color: $alpine-blue
+      font-size: 6em
+      letter-spacing: -0.15rem
+      text-align: center
+      margin: 4rem auto
+      @include media(">phone", "<=tablet")
+        font-size: 4rem
+        margin: 2rem auto
 
-  h1
-    color: $alpine-blue
-    font-size: 6em
-    letter-spacing: -0.15rem
-    text-align: center
-    margin-top: 4rem
+    .alpine-header-img
+      width: 80%
+      margin-bottom: 2rem
+    
+    .copy-column
+      margin-bottom: 2rem
   
-  p
-    color: $alpine-white
-    font-weight: 500
+      p
+        color: $alpine-white
+        line-height: 2rem
 
-.alpine-full
-  margin: 5% auto
+    .alpine-full-img
+      width: 100%
+      max-width: 930px
+      margin: 1.5rem auto
+      padding: 0 1.5rem
 
 
 .bottom-row
@@ -37,3 +48,5 @@
     align-self: center
     max-width: 60%
     margin: 10% auto
+    @include media(">phone", "<=tablet")
+      max-width: 80%

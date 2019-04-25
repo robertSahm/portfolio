@@ -5,11 +5,10 @@ $nav-active-color: $pink
   width: auto
   top: 0
   right: 0
-  margin: 0 2%
+  margin: 1rem
   z-index: 10
   justify-content: center
   padding: .4rem
-  @include media(">phone", "<=tablet")
 
 .navbar-item, a.navbar-item
   position: relative
@@ -27,21 +26,29 @@ $nav-active-color: $pink
     transition: color .4s ease-out
     color: $nav-active-color
   @include media(">phone", "<=tablet")
-    font-size: 1.5rem
+    font-size: 1.3rem
     margin: auto
   
 .works-wrap
-  padding: 1rem
+  padding: 0 1.5rem 
   display: flex
   flex-flow: row wrap
   justify-content: center
   width: 100%
   margin: auto
   @include media(">phone", "<=tablet")
-    flex-flow: column
+    padding: 1rem
+    margin: auto
 
-  .row
+  .link-box-row
+    display: flex
+    flex-flow: row wrap
     justify-content: center
+    width: 100%
+    margin: auto
+    @include media(">phone", "<=tablet")
+      box-shadow: 0 7px 12px 0 rgba(0, 0, 0, .25)
+      margin-bottom: 2rem
 
   .link-box
     position: relative
@@ -51,7 +58,9 @@ $nav-active-color: $pink
     padding: .5rem
     box-shadow: 0 7px 12px 0 rgba(0, 0, 0, .25)
     @include media(">phone", "<=tablet")
-      width: 100%
+      margin: auto
+      width: 50%
+      box-shadow: none
 
     .logo-wrap
       display: flex
@@ -82,6 +91,7 @@ $nav-active-color: $pink
     h3
       font-size: 1.2rem
       text-align: center
+      align-self: center
 
 a.link-wrap
   position: absolute

@@ -1,73 +1,131 @@
 .lucera-container
+  display: flex
   width: 100%
   text-align: center
-  display: flex
-  padding: 3% 2% 
+  margin-top: 2rem
+  @include media(">phone", "<=tablet")
+    margin-top: 0
 
   .frame
     align-self: center
     background-color: white
-    width: 100%
     padding: 0
     box-shadow: 0 10px 10px 2px #aaa
     max-width: 1400px
+    margin: auto
+    width: 100%
 
     .row
       display: flex
-      margin: 6% 3%
-      justify-content: center
+      flex-flow: row wrap
+      width: 100%
 
+      .copy-column
+        margin-bottom: 0
 
 .header-text
   text-align: left
   margin: auto
-  width: 55%
+  width: 50%
+  @include media(">phone", "<=tablet")
+    width: 100%
   
   h1
     font-size: 6rem
     line-height: 6rem
     color: $lucera-blue
+    display: block
+    margin: 0 auto
+    width: 70%
+    @include media(">phone", "<=tablet")
+      text-align: center
+      font-size: 5rem
     span
       font-size: 3rem
       display: block
       width: 100%
       line-height: 2.7rem
       color: $lucera-dark
+      @include media(">phone", "<=tablet")
+        font-size: 1.8rem
+        line-height: 2rem
 
 .bulb-wrap
-  width: 45%
-  margin: auto
-  padding: 2%
-
+  width: 50%
+  margin: 2rem 0 0 0
+  padding: 0
+  text-align: left
+  @include media(">phone", "<=tablet")
+    width: 80%
+    margin: 0 auto
+    text-align: center
   svg
     position: relative
-    top: 0
-    left: 0
+    width: 80%
+    @include media(">phone", "<=tablet")
+      display: inline-block
+      left: 1rem
+      margin: 2rem auto
+      width: 70%
+
+.lucera-images
+  display: flex
+  flex-flow: row wrap
+  width: 100%
+  // justify-content: space-around
+
+  .img-row
     width: 100%
+    padding: 1rem
+    @include media(">phone", "<=tablet")
+      padding: 0
 
-.lucera-1
-  width: 100%
+    img
+      padding: 1rem
+      margin: 0 auto
+      
+    .lucera-1
+      width: 65%
+      @include media(">phone", "<=tablet")
+        width: 100%
 
-.lucera-2
-  width: 90%
+    .lucera-2
+      width: 25%
+      @include media(">phone", "<=tablet")
+        width: 60%
 
-.lucera-3
-  width: 81%
+    .lucera-3
+      width: 30%
+      @include media(">phone", "<=tablet")
+        width: 80%
 
-.lucera-4
-  width: 100%
+    .lucera-4
+      width: 60%
+      @include media(">phone", "<=tablet")
+        width: 100%
 
-.lucera-5
-  width: 100%
+    .lucera-5
+      width: 50%
+      @include media(">phone", "<=tablet")
+        width: 100%
 
-.lucera-6
-  width: 120%
+    .lucera-6
+      width: 30%
+      @include media(">phone", "<=tablet")
+        width: 60%
+      
+    .lucera-7
+      width: 70%
+      @include media(">phone", "<=tablet")
+        width: 100%
 
-.lucera-7
-  width: 90%
+    .lucera-8
+      width: 70%
+      @include media(">phone", "<=tablet")
+        width: 100%
 
-.lucera-8
-  width: 100%
-
-.lucera-9
-  width: 80%
+    .lucera-9
+      width: 30%
+      @include media(">phone", "<=tablet")
+        width: 100%
+      

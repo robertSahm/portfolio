@@ -1,0 +1,110 @@
+.contact-container
+  display: flex
+  width: 100%
+  text-align: center
+  padding: 1.5rem
+  margin: auto
+  @include media(">phone", "<=tablet")
+    padding: 1rem
+
+  .frame
+    align-self: center
+    background-color: $tan
+    padding: 0
+    box-shadow: 0 10px 10px 2px #aaa
+    width: 100%
+    max-width: 1400px
+    height: 500px
+    margin: auto
+    position: relative
+
+    h1
+      position: relative
+      z-index: 10
+      color: $blue
+
+    .left-side
+      position: relative
+      top: 0 
+      left: 0
+      width: 50%
+      min-height: 100%
+      @include media(">phone", "<=tablet")
+        width: 100%
+
+    .svg-wrap-star
+      position: absolute
+      z-index: 0
+      top: 0
+      left: 0
+      height: 100%
+      width: 50%
+      overflow: hidden
+      
+      svg
+        position: relative
+        top: -25%
+        left: -50%
+        width: 175%
+        height: 175%
+        opacity: .75
+
+    .form-wrap
+      width: 50%
+      @include media(">phone", "<=tablet")
+        width: 100%
+
+      form
+        font-family: 'EB Garamond', serif
+        text-align: left
+        display: block
+        width: 100%
+        padding: 2rem
+
+        .field
+          margin-bottom: 1rem
+          
+          label
+            display: block
+            font-size: 1.1rem
+            width: 100%
+            margin-bottom: 0
+            color: rgba($black-text, .75)
+
+          input
+            border: 0
+            border-radius: 0
+            background: transparent
+            width: 50%
+            font-size: 1.35rem
+            font-family: 'EB Garamond', serif
+            transition: all .2s ease-out
+            border-bottom: 1px solid rgba($black-text, .75)
+            // height: .5rem
+            &:focus
+              outline: none
+              border-bottom: 1px solid rgba($black-text, .75)
+              width: 100%
+              // height: 3rem
+            &:invalid
+              color: $red
+              // border-bottom: 1px solid $red
+
+          textarea
+            width: 100%
+            background: transparent
+            height: 5rem
+            font-family: 'EB Garamond', serif
+            font-size: 1.35rem
+            &:focus
+              outline: none
+
+          button
+            background: transparent
+            color: $orange
+            border: 6px solid $orange
+            font-family: 'EB Garamond', serif
+            font-size: 1.6rem
+            padding: 0 1.5rem
+            border-radius: .5rem
+            font-weight: 800

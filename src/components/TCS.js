@@ -24,12 +24,12 @@ const TCS = class extends React.Component {
               Leading these projects involved daily coordition between the I.T. department, creative director, marketing, accouting, communications and C. E. O.. Running these projects amid a new and high-paced business environment tested my managerial skills and ultimately improved my coding and managerial skills many times over. 
             </p>
           </div>
-          <div className="row">
-            <div className="column left-column">
+          <div className="tcs-img-wrap">
+            <div className="left-column">
               <img src={app} className="tcs-app" alt="tcs-chart" />
               <img src={round} className="tcs-round" alt="tcs-chart" />
             </div>
-            <div className="column chart-column">
+            <div className="chart-column">
               <img src={chart1} className="tcs-chart" alt="tcs-chart" />
               <img src={chart2} className="tcs-chart" alt="tcs-chart" />
               <img src={chart3} className="tcs-chart" alt="tcs-chart" />

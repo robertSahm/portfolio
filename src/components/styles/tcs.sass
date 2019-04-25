@@ -2,7 +2,8 @@
   display: flex
   width: 100%
   text-align: center
-  padding: 3% 2%
+  padding: 0
+  margin: auto
 
   .frame
     align-self: center
@@ -10,9 +11,7 @@
     padding: 0
     box-shadow: 0 10px 10px 2px #aaa
     max-width: 1400px
-
-    .row
-      margin: 0 3% 0 3% 
+    margin: auto
 
   h1
     color: $pink
@@ -20,6 +19,10 @@
     letter-spacing: -0.15rem
     text-align: center
     margin-top: 4rem
+    @include media(">phone", "<=tablet")
+      font-size: 4rem
+      margin-top: 2rem
+      line-height: 4rem
   
 .tcs-card
   display: block
@@ -27,6 +30,8 @@
   width: 100%
   max-width: 980px
   padding: 4rem 4rem 2rem
+  @include media(">phone", "<=tablet")
+    padding: 1rem
 
 .copy-column
   margin-bottom: 4rem
@@ -36,35 +41,55 @@
   padding: .7rem 0
   margin: 0 auto
   text-align: left
-
-.left-column
-  width: 45%
-
-  .tcs-round
-    display: block
-    margin: 20% auto
-    width: 70%
-
-  .tcs-app
-    display: block
-    margin: 0 auto
+  @include media(">phone", "<=tablet")
     width: 80%
+    font-size: 1.2rem
+    line-height: 1.85rem
 
-.chart-column
-  width: 55%
 
-  .tcs-chart
-    display: block
-    width: 100%
+.tcs-img-wrap
+  display: flex
+  flex-flow: row wrap
+  width: 100%
+
+  .left-column
+    width: 45%
+    @include media(">phone", "<=tablet")
+      width: 100%
+
+    .tcs-round
+      display: block
+      margin: 20% auto
+      width: 70%
+
+    .tcs-app
+      display: block
+      margin: 0 auto
+      width: 80%
+
+  .chart-column
+    width: 55%
+    @include media(">phone", "<=tablet")
+      padding: 1rem
+      width: 100%
+
+    .tcs-chart
+      display: block
+      width: 100%
 
 .tcs-gmap
   align-self: flex-start
   flex: 0 0 auto
   max-width: 100%
-  margin-bottom: 2%
+  padding: 1.5rem
+  @include media(">phone", "<=tablet")
+    padding: .5rem
 
 .tcs-logo-full
   align-self: flex-start
   flex: 0 0 auto
-  max-width: 20%
-  margin: 2% auto 4%
+  max-width: 20rem
+  margin: 4rem auto 4rem
+  @include media(">phone", "<=tablet")
+    margin: 2rem auto
+    max-width: 40%

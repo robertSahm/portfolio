@@ -23,12 +23,12 @@ const WorkSelector = () => {
 
 	return (
 		<section className="works-wrap">
-			<div className="row">
+			<div className="row link-box-row">
 				<div className="link-box tcs-box">
 					<div className="logo-wrap">
 						<img src={terrapinLogo} alt="logo" />
 					</div>
-					<h3>Terrapin Care Station</h3>
+					<h3>Terrapin</h3>
 					<a
 						// to="/#work-selector"
 						className={"link-wrap"}
