@@ -2,6 +2,8 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import '../components/styles/all.sass'
 import useSiteMetadata from './SiteMetadata'
+import Home from '../components/Home'
+import Navbar from '../components/Navbar'
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
@@ -21,8 +23,9 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
-      {/* <Home /> */}
-      {/* <div>{children}</div> */}
+      <Home />
+      <Navbar />
+      <div>{children}</div>
     </div>
   )
 }

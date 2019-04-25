@@ -1,55 +1,50 @@
-// import React from "react"
-// import { Link } from "gatsby"
+import React, { useState, useEffect } from 'react'
+import { Link } from "gatsby"
 
-// class Navbar extends React.Component {
-// 	constructor(props) {
-// 		super(props)
-//     console.log(this.props)
-// 	}
+const Navbar = () => {
+  const [activeTab, setActiveTab] = useState('work')
+  const [activeWork, setActiveWork] = useState('')
+  const [homeHeight, setHeight] = useState('100vh')
+  const [homeLeft, setLeft] = useState('28.5%')
+  const [animateTrigger, setTrigger] = useState(1)
 
-//   navClick = (e) => {
-//     e.target.classList.toggle(`active`)
-//   }
+  const tabClick = (e, name) => {
+    setActiveTab(name)
+    // setLeft('60%')
+    // setHeight('20vh')
+    // setTrigger(animateTrigger + 1)
+    // e.target.classList.toggle('active')
+    // activeTab == 'work' ? setActiveWork('tcs') : setActiveWork('')
+    activeTab == 'about' || 'contact' ? setActiveWork('') : setActiveWork('tcs')
+  }
 
-// 	render() {
-// 		return (
-// 			<nav className="nav-wrap">
-// 			  <a className="navbar-item active" onClick={this.navClick}>
-// 			  	Selected Work
-// 			  </a>
-// 			  <a className="navbar-item" onClick={this.navClick}>
-// 			  	About
-// 			  </a>
-// 			  <a className="navbar-item" onClick={this.navClick}>
-// 			  	Contact
-// 			  </a>
-// 			</nav>
-// 		)
-// 	}
-// }
+  return (
+    <nav className="nav-wrap">
+      <Link 
+        to="/"
+        className={ activeTab == 'work' ? 'active navbar-item' : 'navbar-item' } 
+        onClick={(e) => tabClick(e, 'work')}
+      >
+        Selected Work
+      </Link>
+      <Link 
+        className="navbar-item" 
+        to="/about"
+        className={ activeTab == 'about' ? 'active navbar-item' : 'navbar-item' }
+        // onClick={(e) => tabClick(e, 'about')}
+      >
+        About
+      </Link>
+      <Link 
+        className="navbar-item" 
+        to="/contact"
+        className={ activeTab == 'about' ? 'active navbar-item' : 'navbar-item' }
+        // onClick={(e) => tabClick(e, 'about')}
+      >
+        Contact
+      </Link>
+    </nav>
+  )
+}
 
-// export default Navbar
-
-
-// dropDown = e => {
-// 	console.log("clicked")
-// 	e.target.classList.add("show")
-// 	this.setState({ showMenu: !this.state.showMenu })
-// }
-
-// {this.state.showMenu ? (
-// 	<div className="dropdown">
-// 		<a className="navbar-item droplink" activeClassName="active">
-// 			Terrapin Care Station
-// 		</a>
-// 		<a className="navbar-item droplink" activeClassName="active">
-// 			AetherWorks
-// 		</a>
-// 		<a className="navbar-item droplink" activeClassName="active">
-// 			Lucera
-// 		</a>
-// 		<a className="navbar-item droplink" activeClassName="active">
-// 			Alpine Labs
-// 		</a>
-// 	</div>
-// ) : null} 
+export default Navbar
