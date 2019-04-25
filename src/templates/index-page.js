@@ -17,7 +17,7 @@ import alpine from "../img/alpine-small.png"
 
 const IndexPage = ({ props }) => {
   const [activeTab, setActiveTab] = useState('work')
-  const [activeWork, setActiveWork] = useState('tcs')
+  const [activeWork, setActiveWork] = useState('')
   const [homeHeight, setHeight] = useState('100vh')
   const [homeLeft, setLeft] = useState('28.5%')
   const [animateTrigger, setTrigger] = useState(1)
@@ -134,12 +134,12 @@ const IndexPage = ({ props }) => {
           >
             About
           </a>
-          <a 
+          {/* <a 
             className={ activeTab == 'contact' ? 'active navbar-item' : 'navbar-item' }
             onClick={(e) => tabClick(e, 'contact')}
           >
             Contact
-          </a>
+          </a> */}
         </nav>
         {activeTab == 'work' ? <WorkSelector /> : null}
         {activeWork == 'tcs' ? <Terrapin /> : null}
@@ -149,34 +149,29 @@ const IndexPage = ({ props }) => {
         {activeTab == 'about' ? <About /> : null}
         {activeTab == 'contact' ? <Contact /> : null}
       </div>
+
       <form
         name="contact-me"
         method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
+        action='?no-cache=1'
       >
+
         <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" value="contact-me" />
-        <div className="field half first">
-          <label htmlFor="name">Name</label>
-          <input type="text" name="name" id="name" />
-        </div>
-        <div className="field half">
-          <label htmlFor="email">Email</label>
-          <input type="text" name="email" id="email" />
-        </div>
-        <div className="field">
-          <label htmlFor="message">Message</label>
-          <textarea name="message" id="message" rows="6" />
-        </div>
-        <ul className="actions">
-          <li>
-            <input type="submit" value="Send Message" className="special" />
-          </li>
-          <li>
-            <input type="reset" value="Clear" />
-          </li>
-        </ul>
+
+        <label htmlFor="name">Name</label>
+        <input type="text" name="name" id="name" />
+
+
+        <label htmlFor="email">Email</label>
+        <input type="text" name="email" id="email" />
+
+        <label htmlFor="message">Message</label>
+        <textarea name="message" id="message" rows="6" />
+
+        <input type="submit" value="Send Message" className="special" />
       </form>
     </div>
   )
