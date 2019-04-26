@@ -32,7 +32,7 @@ const Home = () => {
           <div className="row">
             <div className="svg-wrap" onClick={() => trigger()}>
               <SvgLines 
-                animate={animateTrigger || 'true'}
+                animate={ 'true' || animateTrigger }
                 duration={2000} 
                 stagger={1000} 
                 fade={true} 
