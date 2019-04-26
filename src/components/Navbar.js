@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <nav className="nav-wrap" id="work-selector">
       <Link 
-        to="/"
+        to="/#work-selector"
         className="navbar-item" 
         activeClassName='active'
         // className={ activeTab == 'work' ? 'active navbar-item' : 'navbar-item' } 

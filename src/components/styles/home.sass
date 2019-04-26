@@ -23,20 +23,26 @@
 
   h1.my-name
     color: $pink
-
     @include media(">phone", "<=tablet")
-      font-size: 2rem
- 
+      font-size: 2.5rem
+      padding: 0 0 0 1rem
+      line-height: 4rem
+
   h2.subhead
     line-height: 0rem
+    @include media(">phone", "<=tablet")
+      font-size: 1.2rem
 
 svg
   position: absolute
   bottom: -2px
-  // left: 28.5%
+  left: 28.5%
   height: 98%
   width: auto
   transition: left 1s linear
+  @include media(">phone", "<=tablet")
+    height: 80%
+    left: 15%
 
 .svg-shape
   mix-blend-mode: multiply

@@ -1,41 +1,54 @@
 .about-container
   display: flex
   width: 100%
-  padding: 3% 2%
+  padding: 1.5rem
+  margin: auto
+  @include media(">phone", "<=tablet")
+    padding: 1rem
 
   .frame
-    align-self: center
+    width: 100%
+    max-width: 1400px
     background-color: $tan
     padding: 0
     box-shadow: 0 10px 10px 2px #aaa
-    width: 100%
-    max-width: 1400px
-    justify-content: space-between
+    justify-content: center
 
-    .row
+    h1
+      color: $orange
+      font-size: 5rem
+      margin-top: 3rem
       width: 100%
-      .column
+      text-align: center
+      @include media(">phone", "<=tablet")
+        font-size: 4rem
+
+    .about-content-wrap
+      display: flex
+      justify-content: center
+      flex-flow: row wrap
+
+      .copy-column
         width: 50%
-        &.copy-column
-          padding: 2rem
-          height: 100%
-          h1
-            color: $orange
-            font-size: 3rem
-            margin: 0
-            padding: 0
-          .body-copy
-            width: 100%
-            font-weight: 400
-            font-size: 1.2rem
+        padding: 2rem
+        margin: 0
+        @include media(">phone", "<=tablet")
+          width: 100%
+
+        .body-copy
+          width: 100%
+          font-weight: 500
+          font-size: 1.2rem
       
-        .img-wrap
-          display: flex
-          justify-content: center
-          align-items: center
-          height: 100%
+      .img-wrap
+        width: 50%
+        margin: 0
+        align-self: center
+        @include media(">phone", "<=tablet")
+          width: 80%
+          margin-bottom: 3rem
 
-          img
-            width: 100%
+        img
+          width: 100%
 
-        
+      
