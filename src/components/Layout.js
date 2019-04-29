@@ -32,8 +32,6 @@ const TemplateWrapper = ({ children }) => {
     }
   }
 
-  // console.log()
-
   return (
     <div>
       <Helmet>
