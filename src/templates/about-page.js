@@ -15,7 +15,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
         <div className="about-content-wrap">
           <div className="copy-column">
             <p className="body-copy">
-              When I'm not creating for the web, I'm probably playing drums and guitar. I've been playing and writing music the majority of my life and even a spot playing drums for the rock band Le Loup. I spent the greater part of 3 years touring the US and Europe. <a href="https://pitchfork.com/reviews/albums/13551-family/" targe="_blank"  rel="noopener noreferrer">Here's our last Pitchfork review.</a>
+              When I'm not creating for the web, I'm probably playing drums and guitar. I've been playing and writing music the majority of my life including a spot playing drums for the rock band Le Loup. I spent the greater part of 3 years touring the US and Europe. <a href="https://pitchfork.com/reviews/albums/13551-family/" targe="_blank"  rel="noopener noreferrer">Here's our last Pitchfork review.</a>
             </p>
             <p className="body-copy">
               Navigating the decisions, personalities and solutions inherent to creative group work  comes naturally after decades spent creating original music in team environments.

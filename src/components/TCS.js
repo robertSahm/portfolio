@@ -18,10 +18,10 @@ const TCS = class extends React.Component {
           <img src={card} className="tcs-card" alt="tcs-card" />
           <div className="column copy-column">
             <p className="body-copy">
-              <b>Terrapin Care Station</b> is one of the leading cannabis retailers in Colorado. With 6 retail locations and multiple grows including Pensylvania, they are one of the fastest growing legal cannabis operations in the world. I was brought on to revamp their entire digital suite, including a new front-facing company site, an internal sales charting dashboard, multiple e-commerce/CMS integrations and updating the interal sales records API to work with modern front-end development.
+              <b>Terrapin Care Station</b> is one of the leading cannabis retailers in Colorado. With 6 retail locations and multiple grow facilities, including Pensylvania, they are one of the fastest growing legal cannabis operations in the world. I was brought on to revamp their entire digital suite, including a new front-facing company site, an internal sales charting dashboard, and multiple e-commerce/CMS integrations. I also updated the internal sales records API to work with a modern front-end app.
             </p>
             <p className="body-copy">
-              Leading these projects involved daily coordition between the I.T. department, creative director, marketing, accouting, communications and C. E. O.. Running these projects amid a new and high-paced business environment tested my managerial skills and ultimately improved my coding and managerial skills many times over. 
+              Leading these projects involved daily coordination between the IT department, the creative director, the CEO and the marketing, accounting, and communications departments. Running these projects amid a new and high-paced business environment tested my managerial skills and ultimately improved my coding and managerial skills many times over. 
             </p>
           </div>
           <div className="tcs-img-wrap">

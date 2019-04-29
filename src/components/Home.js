@@ -7,7 +7,6 @@ const Home = () => {
   const [animateTrigger, setTrigger] = useState(1)
   const [{ homeHeight }, dispatch] = useStateValue()
 
-
   // const growHome = () => {
   //   setHeight('100vh')
   //   setLeft('28.5%')
@@ -57,6 +56,5 @@ const Home = () => {
       </section>
   )
 }
-
 
 export default Home

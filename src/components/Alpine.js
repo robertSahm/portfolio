@@ -15,7 +15,7 @@ const Alpine = class extends React.Component {
           <img src={header} className="alpine-header-img" alt="alpine" />
           <div className="column copy-column">
             <p className="body-copy">
-              <b>Alpine Labs</b> is a boutique video production company based out of West Hollywood, CA. They needed a solution to host and serve their own videos while adhering to a strict design aesthetic. My responsibilities included implimenting static concept art into animated, interactive satisfaction using JS, HTML, SCSS and Ruby.
+              <b>Alpine Labs</b> is a boutique video production company based out of West Hollywood, CA. They needed a solution to host and serve their own videos while adhering to a strict design aesthetic. My responsibilities included implementing static concept art into animated, interactive satisfaction using JS, HTML, SCSS and Ruby.
             </p>
           </div>
           <img src={steps} className="alpine-full-img" alt="alpine" />

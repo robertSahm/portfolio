@@ -15,7 +15,7 @@ const Aether = class extends React.Component {
           <img src={disksDepth} className="disks-depth" alt="disks" />
           <div className="column copy-column">
             <p className="body-copy">
-              <b>AetherWorks</b> is a software research & venture development firm based in New York City. I was originally brought me on for a full redesign of their Windows application <b>AetherStore</b>, though soon into that project I was offered the opportunity to redesign their remaining properties, including the new company site and multiple product marketing sites.
+              <b>AetherWorks</b> is a software research & venture development firm based in New York City. I was originally brought on for a full redesign of their Windows application <b>AetherStore</b>, though soon into that project I was offered the opportunity to redesign their remaining properties, including the new company site and multiple product marketing sites.
             </p>
             <p className="body-copy">
               I intially created the browser-based app with a React/Redux architecture, but it was later determined that a scaled down, less abstracted and mostly jQuery approach was a better fit for this specific project.
