@@ -93,32 +93,22 @@ module.exports = {
 							`600`,
 							`600i`,
 							`700`,
-							`700i`,
 							`800`,
 							`800i`
 						],
 						subsets: [`latin`]
-					},
-					{
-						family: `Roboto`,
-						variants: [
-							`400`,
-							`400i`,
-							`500`,
-							`500i`,
-							`600`,
-							`600i`,
-							`700`,
-							`700i`,
-							`800`,
-							`800i`,
-              `900`,
-              `900i`
-						],
 					}
 				]
 			}
 		},
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-139274994-1",
+        // Puts tracking script in the head instead of the body
+        head: true,
+      },
+    },
 		"gatsby-plugin-netlify" // make sure to keep it last in the array
 	],
 	// for avoiding CORS while developing Netlify Functions locally
