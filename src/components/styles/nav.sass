@@ -17,11 +17,13 @@ $nav-active-color: $pink
   font-size: 1.2rem
   line-height: 1.5rem
   padding: 0
-  margin: 0 .7rem
+  margin: 0 1.3rem
   font-weight: 700
   z-index: 20
   cursor: pointer
   transition: color .4s ease-out
+  &:hover
+    color: $orange
   &.active
     transition: color .4s ease-out
     color: $nav-active-color
@@ -109,6 +111,20 @@ a.link-wrap
   height: 1000px
   border: 1px solid red
 
+.github
+  @include media(">tablet")
+    top: -7px
+
+  svg
+    position: relative
+    top: 0
+    left: 0
+    width: 35px
+    height: 35px
+    fill: $blue
+    transition: fill .2s linear
+    &:hover
+      fill: $orange
 
 
 
