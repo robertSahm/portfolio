@@ -63,7 +63,7 @@ const Index = ({ props }) => {
           </div>
           <div className="link-box lucera-box">
             <div className="logo-wrap">
-              <img src={bulb} alt="logo" />
+              <img src={bulb} alt="lucera-logo" />
             </div>
             <h3>Lucera</h3>
             <a className="link-wrap" onClick={(e) => workClick(e, 'lucera')}></a>
